@@ -1,0 +1,19 @@
+
+x
+Happ/src/main/java/com/example/shimmer/viewmodel/MainActivityViewModel.kt,4\f\4f17b6479e251f18c3700b034f51a8fa884328ae
+g
+7app/src/main/java/com/example/shimmer/model/dto/Data.kt,0\b\0beedfbe8abbc3648cb59a8549b5c7d68bd3e930
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+r
+Bapp/src/main/java/com/example/shimmer/model/adapter/MainAdapter.kt,5\3\53c9ffbe91705c7b12abf448b5ba36bfc7bf1d89
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+s
+Capp/src/main/java/com/example/shimmer/model/service/ApiInterface.kt,2\e\2e8c9d59f39564331f95afbe7bdac10c310f9e42
+w
+Gapp/src/main/java/com/example/shimmer/model/service/RetrofitClient.java,d\3\d3af3ee3423a5794acd1eb51ad02c1cdaa71f335
+p
+@app/src/main/java/com/example/shimmer/model/service/ApiClient.kt,e\9\e9e70b2439ce06a73ef6f26d9d1bfaa71285bbfb
+j
+:app/src/main/java/com/example/shimmer/view/MainActivity.kt,5\3\539e461af882cb00fcbcff4f0502447cb1fb3f7d
