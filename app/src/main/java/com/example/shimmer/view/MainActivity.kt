@@ -37,15 +37,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupAPICall() {
-        var call: Call<List<Data>> = RetrofitClient
+      /*  var call: Call<List<Data>> = RetrofitClient
             .getInstance()
             .apiService()
-            .getName()
+            .getName()*/
 
-        call.enqueue(object : Callback<List<Data>> {
+        var call: Call<List<Data>>? = RetrofitClient().getInstance()
+            .apiService()?.getName()
+
+        call?.enqueue(object : Callback<List<Data>> {
             override fun onResponse(call: Call<List<Data>>, response: Response<List<Data>>) {
                 Toast.makeText(applicationContext, "Success", Toast.LENGTH_LONG).show()
-                shimmerFrameLayout.stopShimmerAnimation()
+                shimmerFrameLayout.stopShimmer()
                 shimmerFrameLayout.visibility = View.GONE
                 recyclerView.visibility = View.VISIBLE
                 dataList = response.body()
@@ -55,9 +58,12 @@ class MainActivity : AppCompatActivity() {
                         applicationContext
                     )
                 }
+                /* dataLists = data?.let { ArrayList(it) }!!
+                 mainAdapter = MAainAdapter(dataLists, context)
+                 list_data?.setAdapter(mainAdapter)*/
             }
 
-            override fun onFailure(call: Call<List<Data>>, t: Throwable) {
+             override fun onFailure(call: Call<List<Data>>, t: Throwable) {
                 shimmerFrameLayout.visibility = View.GONE
                 Log.e("------------", t.toString())
                 Toast.makeText(this@MainActivity, "Something Went Wrong", Toast.LENGTH_LONG).show()
@@ -67,11 +73,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        shimmerFrameLayout.startShimmerAnimation()
+        shimmerFrameLayout.startShimmer()
     }
 
     override fun onPause() {
-        shimmerFrameLayout.stopShimmerAnimation()
+        shimmerFrameLayout.stopShimmer()
         super.onPause()
     }
 }
